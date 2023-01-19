@@ -1,0 +1,292 @@
+<html>
+<head>
+<title>LinkedList3.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #a9b7c6;}
+.s1 { color: #629755; font-style: italic;}
+.s2 { color: #629755; font-weight: bold; font-style: italic;}
+.s3 { color: #cc7832;}
+.s4 { color: #808080;}
+.s5 { color: #6a8759;}
+.s6 { color: #6897bb;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+LinkedList3.java</font>
+</center></td></tr></table>
+<pre>
+<span class="s1">/**</span>
+ <span class="s1">* Write a description of class LinkedList3 here.</span>
+ <span class="s1">*</span>
+ <span class="s1">* </span><span class="s2">@author </span><span class="s1">(your name)</span>
+ <span class="s1">* </span><span class="s2">@version </span><span class="s1">(a version number or a date)</span>
+ <span class="s1">*/</span>
+<span class="s3">public class </span><span class="s0">LinkedList3&lt;T&gt; </span><span class="s3">implements </span><span class="s0">MyLL&lt;T&gt;</span>
+<span class="s0">{</span>
+    <span class="s4">// instance variables - replace the example below with your own</span>
+    <span class="s3">private </span><span class="s0">ListNode front</span><span class="s3">;</span>
+    <span class="s3">private </span><span class="s0">ListNode back</span><span class="s3">;</span>
+    <span class="s3">private </span><span class="s0">ListNode current</span><span class="s3">;</span>
+    <span class="s3">private int </span><span class="s0">size</span><span class="s3">;</span>
+
+    <span class="s3">public class </span><span class="s0">ListNode</span>
+    <span class="s0">{</span>
+
+        <span class="s3">private </span><span class="s0">T data</span><span class="s3">;</span>
+        <span class="s3">private </span><span class="s0">ListNode next</span><span class="s3">;</span>
+
+        <span class="s3">public </span><span class="s0">ListNode(T dat</span><span class="s3">, </span><span class="s0">ListNode nxt)</span>
+        <span class="s0">{ data= dat</span><span class="s3">;</span>
+          <span class="s0">next= nxt</span><span class="s3">;</span>
+        <span class="s0">}</span>
+
+        <span class="s3">public </span><span class="s0">ListNode(T dat)</span>
+        <span class="s0">{data=dat</span><span class="s3">;</span>
+         <span class="s0">next=</span><span class="s3">null;</span>
+        <span class="s0">}</span>
+
+        <span class="s3">public </span><span class="s0">String toString()</span>
+        <span class="s0">{ </span><span class="s3">return </span><span class="s5">&quot;[&quot;</span><span class="s0">+ data+ </span><span class="s5">&quot;]&quot;</span><span class="s3">;</span>
+            <span class="s4">// return &quot;[&quot;+ this.data+ &quot;:&quot; + this.nextNode+ &quot;]&quot;;</span>
+        <span class="s0">}</span>
+    <span class="s0">}</span>
+
+    <span class="s1">/**</span>
+     <span class="s1">* Constructor for objects of class LinkedList3</span>
+     <span class="s1">*/</span>
+    <span class="s3">public </span><span class="s0">LinkedList3()</span>
+    <span class="s0">{   front= </span><span class="s3">null;</span>
+        <span class="s0">back= </span><span class="s3">null;</span>
+
+    <span class="s0">}</span>
+
+    <span class="s3">public </span><span class="s0">LinkedList3(T a</span><span class="s3">, </span><span class="s0">T b</span><span class="s3">, </span><span class="s0">T c</span><span class="s3">, </span><span class="s0">T d)</span>
+    <span class="s0">{ front= </span><span class="s3">new </span><span class="s0">ListNode(a</span><span class="s3">, null</span><span class="s0">)</span><span class="s3">;</span>
+        <span class="s0">ListNode mid = </span><span class="s3">new </span><span class="s0">ListNode(b</span><span class="s3">, null</span><span class="s0">)</span><span class="s3">;</span>
+        <span class="s0">front.next=mid</span><span class="s3">;</span>
+        <span class="s0">ListNode mid1= </span><span class="s3">new </span><span class="s0">ListNode(c</span><span class="s3">, null</span><span class="s0">)</span><span class="s3">;</span>
+        <span class="s0">mid.next= mid1</span><span class="s3">;</span>
+        <span class="s0">back= </span><span class="s3">new </span><span class="s0">ListNode(d</span><span class="s3">, null</span><span class="s0">)</span><span class="s3">;</span>
+        <span class="s0">mid1.next=back</span><span class="s3">;</span>
+        <span class="s0">size=</span><span class="s6">4</span><span class="s3">;</span>
+
+    <span class="s0">}</span>
+    <span class="s0">@Override</span>
+    <span class="s3">public </span><span class="s0">String toString()</span>
+    <span class="s0">{ </span>
+        <span class="s0">String answer</span><span class="s3">;</span>
+        <span class="s3">if </span><span class="s0">(size&gt;</span><span class="s6">0</span><span class="s0">)</span>
+        <span class="s0">{ answer= </span><span class="s5">&quot;size: &quot; </span><span class="s0">+ </span><span class="s3">this</span><span class="s0">.size() + </span><span class="s5">&quot;</span><span class="s3">\n</span><span class="s5">front node: &quot;</span><span class="s0">+ front.toString()+ </span><span class="s5">&quot;</span><span class="s3">\n</span><span class="s5">back node: &quot; </span><span class="s0">+ back.toString() + </span><span class="s5">&quot;</span><span class="s3">\n</span><span class="s5">&quot;</span><span class="s3">;</span>
+
+        <span class="s0">ListNode current= front</span><span class="s3">;</span>
+        <span class="s3">while</span><span class="s0">( current != </span><span class="s3">null</span><span class="s0">)</span>
+        <span class="s0">{answer = answer + current.toString() + </span><span class="s5">&quot;</span><span class="s3">\n</span><span class="s5">&quot;</span><span class="s3">;</span>
+            <span class="s0">current= current.next</span><span class="s3">;</span>
+        <span class="s0">}</span>
+    <span class="s0">}</span>
+        <span class="s3">else </span>
+        <span class="s0">answer= </span><span class="s5">&quot;List is empty&quot;</span><span class="s3">;</span>
+        <span class="s3">return </span><span class="s0">answer</span><span class="s3">;</span>
+    <span class="s0">}</span>
+    <span class="s0">@Override</span>
+    <span class="s3">public int </span><span class="s0">size()</span>
+    <span class="s0">{ current= front</span><span class="s3">;</span>
+        <span class="s3">int </span><span class="s0">i= </span><span class="s6">0</span><span class="s3">;</span>
+        <span class="s3">while</span><span class="s0">(current.next != </span><span class="s3">null</span><span class="s0">)</span>
+        <span class="s0">{ i++</span><span class="s3">;</span>
+          <span class="s0">current= current.next</span><span class="s3">;</span>
+        <span class="s0">}</span>
+        <span class="s0">i++</span><span class="s3">;</span>
+        <span class="s3">if </span><span class="s0">(size == i)</span>
+        <span class="s0">{</span><span class="s3">return </span><span class="s0">i</span><span class="s3">;</span>
+        <span class="s0">}</span>
+        <span class="s3">else </span>
+        
+        <span class="s0">{System.out.println(</span><span class="s5">&quot;Size was not properly updated&quot;</span><span class="s0">)</span><span class="s3">;</span>
+            <span class="s3">return </span><span class="s6">0</span><span class="s3">;</span><span class="s0">}</span>
+    <span class="s0">}</span>
+    <span class="s0">@Override</span>
+    <span class="s3">public void </span><span class="s0">add(T newData)</span>
+    <span class="s0">{ ListNode temp= </span><span class="s3">new </span><span class="s0">ListNode(newData)</span><span class="s3">;</span>
+        <span class="s3">if </span><span class="s0">(front == </span><span class="s3">null</span><span class="s0">)</span>
+        <span class="s0">{</span>
+            <span class="s0">front= temp</span><span class="s3">;</span>
+            <span class="s0">back=temp</span><span class="s3">;</span>
+        <span class="s0">}</span>
+        <span class="s3">else</span>
+        <span class="s0">{</span>
+            <span class="s0">back.next=temp</span><span class="s3">;</span>
+            <span class="s0">back = temp</span><span class="s3">;</span>
+        <span class="s0">}</span>
+        <span class="s0">size++</span><span class="s3">;</span>
+
+    <span class="s0">}</span>
+    <span class="s0">@Override</span>
+    <span class="s3">public void </span><span class="s0">add(</span><span class="s3">int </span><span class="s0">loc</span><span class="s3">, </span><span class="s0">T newData)</span>
+    <span class="s0">{ ListNode temp = </span><span class="s3">new </span><span class="s0">ListNode(newData)</span><span class="s3">;</span>
+        <span class="s3">if </span><span class="s0">(size==</span><span class="s6">0 </span><span class="s0">&amp;&amp; loc ==</span><span class="s6">0</span><span class="s0">)</span>
+        <span class="s0">{</span>
+            <span class="s0">front= temp</span><span class="s3">;</span>
+            <span class="s0">back= temp</span><span class="s3">;</span>
+            <span class="s0">size++</span><span class="s3">;</span>
+        <span class="s0">}</span>
+        <span class="s3">else if </span><span class="s0">(loc == (size) &amp;&amp; size!=</span><span class="s6">0</span><span class="s0">)</span>
+        <span class="s0">{ back.next=temp</span><span class="s3">;</span>
+            <span class="s0">back= temp</span><span class="s3">;</span>
+            <span class="s0">size++</span><span class="s3">;</span>
+        <span class="s0">}</span>
+        <span class="s3">else if </span><span class="s0">((front != </span><span class="s3">null</span><span class="s0">) &amp;&amp; loc==</span><span class="s6">0</span><span class="s0">)</span>
+        <span class="s0">{ temp.next=front</span><span class="s3">;</span>
+            <span class="s0">front= temp</span><span class="s3">;</span>
+            <span class="s0">size++</span><span class="s3">;</span>
+        <span class="s0">}</span>
+        <span class="s3">else if</span><span class="s0">(loc &gt; size)</span>
+        <span class="s0">{System.out.println(</span><span class="s5">&quot;Out of Bounds&quot;</span><span class="s0">)</span><span class="s3">;</span>
+        <span class="s0">}</span>
+        <span class="s3">else if</span><span class="s0">(loc != size &amp;&amp; loc!= </span><span class="s6">0</span><span class="s0">)</span>
+        <span class="s0">{ </span><span class="s3">int </span><span class="s0">i=</span><span class="s6">0</span><span class="s3">;</span>
+            <span class="s0">current= front</span><span class="s3">;</span>
+            <span class="s3">while</span><span class="s0">(i&lt;loc-</span><span class="s6">1</span><span class="s0">)</span>
+            <span class="s0">{current= current.next</span><span class="s3">;</span>
+                <span class="s0">i++</span><span class="s3">;</span>
+            <span class="s0">}</span>
+            <span class="s0">temp.next=current.next</span><span class="s3">;</span>
+            <span class="s0">current.next=temp</span><span class="s3">;</span>
+            <span class="s0">size++</span><span class="s3">;</span>
+
+        <span class="s0">}</span>
+    <span class="s0">}</span>
+    <span class="s0">@Override</span>
+    <span class="s3">public </span><span class="s0">T remove(</span><span class="s3">int </span><span class="s0">loc)</span>
+    <span class="s0">{   T temp1</span><span class="s3">;</span>
+        <span class="s0">ListNode temp2</span><span class="s3">;</span>
+        <span class="s3">if</span><span class="s0">(size==</span><span class="s6">0</span><span class="s0">)</span>
+            <span class="s0">System.out.print(</span><span class="s5">&quot;Index Out Of Bounds- Empty List&quot;</span><span class="s0">)</span><span class="s3">;</span>
+        <span class="s3">else if</span><span class="s0">(loc==</span><span class="s6">0</span><span class="s0">)</span>
+        <span class="s0">{   temp1= front.data</span><span class="s3">;</span>
+            <span class="s0">front= front.next</span><span class="s3">;</span>
+            <span class="s0">size--</span><span class="s3">;</span>
+            <span class="s3">return </span><span class="s0">temp1</span><span class="s3">;</span>
+        <span class="s0">}</span>
+        <span class="s3">else if</span><span class="s0">(loc==size-</span><span class="s6">1</span><span class="s0">)</span>
+        <span class="s0">{ </span>
+            <span class="s0">current= front</span><span class="s3">;</span>
+
+            <span class="s3">for</span><span class="s0">(</span><span class="s3">int </span><span class="s0">i=</span><span class="s6">0</span><span class="s3">; </span><span class="s0">i&lt; size-</span><span class="s6">2</span><span class="s3">;</span><span class="s0">i++)</span>
+            <span class="s0">{current=current.next</span><span class="s3">;</span>
+            <span class="s0">}</span>
+            <span class="s0">temp1= back.data</span><span class="s3">;</span>
+            <span class="s0">back= current</span><span class="s3">;</span>
+            <span class="s0">back.next=(</span><span class="s3">null</span><span class="s0">)</span><span class="s3">;</span>
+            <span class="s0">size--</span><span class="s3">;</span>
+            <span class="s3">return </span><span class="s0">temp1</span><span class="s3">;</span>
+        <span class="s0">}</span>
+        <span class="s3">else if</span><span class="s0">(loc &gt;= size || loc &lt;</span><span class="s6">0</span><span class="s0">)</span>
+        <span class="s0">{ System.out.println(</span><span class="s5">&quot;Index Out of Bounds&quot;</span><span class="s0">)</span><span class="s3">;</span>
+            <span class="s3">return null;</span>
+        <span class="s0">}</span>
+        <span class="s3">else</span>
+        <span class="s0">{current= front</span><span class="s3">;</span>
+            <span class="s3">int </span><span class="s0">i=</span><span class="s6">0</span><span class="s3">;</span>
+            <span class="s3">while </span><span class="s0">(i&lt;loc-</span><span class="s6">1</span><span class="s0">)</span>
+            <span class="s0">{current= current.next</span><span class="s3">;</span>
+                <span class="s0">i++</span><span class="s3">;</span>
+            <span class="s0">}</span>
+            <span class="s0">temp1= current.next.data</span><span class="s3">;</span>
+            <span class="s0">current.next=current.next.next</span><span class="s3">;</span>
+            <span class="s0">size--</span><span class="s3">;</span>
+            <span class="s3">return </span><span class="s0">temp1</span><span class="s3">;</span>
+        <span class="s0">}</span>
+        <span class="s3">return null;</span>
+    <span class="s0">}</span>
+    <span class="s0">@Override</span>
+    <span class="s3">public void </span><span class="s0">remove(T val)</span>
+    <span class="s0">{ current= front</span><span class="s3">;</span>
+        <span class="s3">int </span><span class="s0">i= </span><span class="s6">0</span><span class="s3">;</span>
+        <span class="s3">int </span><span class="s0">c=</span><span class="s6">0</span><span class="s3">;</span>
+        <span class="s3">while</span><span class="s0">(current != </span><span class="s3">null</span><span class="s0">)</span>
+        <span class="s0">{ </span>
+            <span class="s3">if</span><span class="s0">(current.data.equals(val))</span>
+            <span class="s0">{ remove(i)</span><span class="s3">;</span>
+                <span class="s0">i--</span><span class="s3">;</span>
+                <span class="s0">current=current.next</span><span class="s3">;</span>
+                <span class="s0">c++</span><span class="s3">;</span>
+                <span class="s4">//int j= 0;</span>
+                <span class="s4">// while(j&lt; i-1)</span>
+                <span class="s4">// {current= current.returnNext();</span>
+                <span class="s4">// i++;</span>
+                <span class="s4">// }</span>
+                <span class="s4">// current.setNext(current.returnNext().returnNext());</span>
+                <span class="s4">// size--;</span>
+            <span class="s0">}</span>
+            <span class="s3">else </span>
+                <span class="s0">current= current.next</span><span class="s3">;</span>
+            <span class="s0">i++</span><span class="s3">;</span>
+        <span class="s0">}</span>
+        <span class="s3">if </span><span class="s0">(c == </span><span class="s6">0</span><span class="s0">)</span>
+        <span class="s0">{System.out.println(</span><span class="s5">&quot;Value not found-cannot be removed&quot;</span><span class="s0">)</span><span class="s3">;</span>
+        <span class="s0">}</span>
+    <span class="s0">}</span>
+    <span class="s0">@Override</span>
+    <span class="s3">public </span><span class="s0">T getValue(</span><span class="s3">int </span><span class="s0">loc)</span>
+    <span class="s0">{   </span>
+        <span class="s3">if </span><span class="s0">(loc &gt;= </span><span class="s6">0 </span><span class="s0">&amp;&amp; loc &lt; size)</span>
+        <span class="s0">{</span><span class="s3">int </span><span class="s0">i=</span><span class="s6">0</span><span class="s3">;</span>
+            <span class="s0">current= front</span><span class="s3">;</span>
+            <span class="s3">while</span><span class="s0">(i&lt;loc)</span>
+            <span class="s0">{current= current.next</span><span class="s3">;</span>
+                <span class="s0">i++</span><span class="s3">;</span>
+            <span class="s0">}</span>
+            <span class="s3">return </span><span class="s0">current.data</span><span class="s3">;</span>
+        <span class="s0">}   </span>
+        <span class="s0">System.out.println(</span><span class="s5">&quot;Location out of bounds&quot;</span><span class="s0">)</span><span class="s3">;</span>
+
+        <span class="s3">return null;</span>
+
+    <span class="s0">}</span>
+    <span class="s0">@Override</span>
+    <span class="s3">public int </span><span class="s0">getLocation(T val)</span>
+    <span class="s0">{ current= front</span><span class="s3">;</span>
+        <span class="s3">int </span><span class="s0">i= </span><span class="s6">0</span><span class="s3">;</span>
+        <span class="s3">while</span><span class="s0">(current != </span><span class="s3">null</span><span class="s0">)</span>
+        <span class="s0">{</span><span class="s3">if </span><span class="s0">(current.data.equals(val))</span>
+            <span class="s0">{</span><span class="s3">return </span><span class="s0">i</span><span class="s3">;</span>
+            <span class="s0">}</span>
+            <span class="s0">i++</span><span class="s3">;</span>
+            <span class="s0">current= current.next</span><span class="s3">;</span>
+        <span class="s0">}</span>
+        <span class="s0">System.out.println(</span><span class="s5">&quot;Value not found&quot;</span><span class="s0">)</span><span class="s3">;</span>
+        <span class="s3">return </span><span class="s0">-</span><span class="s6">1</span><span class="s3">;</span>
+    <span class="s0">}</span>
+    <span class="s3">public void </span><span class="s0">doubleXthNode(</span><span class="s3">int </span><span class="s0">x)</span>
+    <span class="s0">{ current=front</span><span class="s3">;</span>
+        <span class="s3">int </span><span class="s0">i=</span><span class="s6">1</span><span class="s3">;</span>
+        <span class="s3">if</span><span class="s0">(x&lt;= size)</span>
+        <span class="s0">{</span><span class="s3">while</span><span class="s0">(i!=x)</span>
+            <span class="s0">{current=current.next</span><span class="s3">;</span>
+                <span class="s0">i++</span><span class="s3">;</span>
+            <span class="s0">}</span>
+            <span class="s0">ListNode temp= </span><span class="s3">new </span><span class="s0">ListNode(current.data</span><span class="s3">, null</span><span class="s0">)</span><span class="s3">;</span>
+            <span class="s0">temp.data=current.data</span><span class="s3">;</span>
+            <span class="s0">temp.next=current.next</span><span class="s3">;</span>
+            <span class="s0">current.next=temp</span><span class="s3">;</span>
+            <span class="s0">size++</span><span class="s3">;</span>
+        <span class="s0">}</span>
+    <span class="s0">}</span>
+    <span class="s3">public </span><span class="s0">ListNode removeFront()</span>
+    <span class="s0">{ ListNode temp= front</span><span class="s3">;</span>
+       <span class="s3">if</span><span class="s0">(size&gt;</span><span class="s6">0</span><span class="s0">)</span>
+       <span class="s0">{front=front.next</span><span class="s3">;</span>
+        <span class="s3">return </span><span class="s0">temp</span><span class="s3">;</span>
+    <span class="s0">}</span>
+    <span class="s3">else return null;</span>
+    <span class="s0">}</span>
+<span class="s0">}</span>
+
+</pre>
+</body>
+</html>

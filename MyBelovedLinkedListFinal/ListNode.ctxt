@@ -1,0 +1,18 @@
+#BlueJ class context
+comment0.target=ListNode
+comment0.text=\n\ Write\ a\ description\ of\ class\ ListNode\ here.\n\n\ @author\ (your\ name)\n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=dat\ nxt
+comment1.target=ListNode(java.lang.String,\ ListNode)
+comment2.params=dat
+comment2.target=ListNode(java.lang.String)
+comment3.params=
+comment3.target=java.lang.String\ getValue()
+comment4.params=
+comment4.target=ListNode\ returnNext()
+comment5.params=nData
+comment5.target=void\ setValue(java.lang.String)
+comment6.params=nNext
+comment6.target=void\ setNext(ListNode)
+comment7.params=
+comment7.target=java.lang.String\ toString()
+numComments=8

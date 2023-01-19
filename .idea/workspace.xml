@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ed0820de-3399-49e4-863e-9a62084655bf" name="Changes" comment="linked list files!">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/LinkedList.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBelovedLinkedListFinal/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBelovedLinkedListFinal/.idea/MyBelovedLinkedListFinal.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBelovedLinkedListFinal/.idea/checkstyle-idea.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBelovedLinkedListFinal/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBelovedLinkedListFinal/CLLRunner.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBelovedLinkedListFinal/CLLRunner.ctxt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBelovedLinkedListFinal/CLLRunner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBelovedLinkedListFinal/CircularLinkedList$CLLNode.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBelovedLinkedListFinal/CircularLinkedList$ListNode.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBelovedLinkedListFinal/CircularLinkedList.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBelovedLinkedListFinal/CircularLinkedList.ctxt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBelovedLinkedListFinal/CircularLinkedList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBelovedLinkedListFinal/LLRunner.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBelovedLinkedListFinal/LLRunner.ctxt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBelovedLinkedListFinal/LLRunner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBelovedLinkedListFinal/LLRunner2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBelovedLinkedListFinal/LLRunner2.ctxt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBelovedLinkedListFinal/LLRunner2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBelovedLinkedListFinal/LLRunner3.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBelovedLinkedListFinal/LLRunner3.ctxt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBelovedLinkedListFinal/LLRunner3.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBelovedLinkedListFinal/LinkedList.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBelovedLinkedListFinal/LinkedList.ctxt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBelovedLinkedListFinal/LinkedList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBelovedLinkedListFinal/LinkedList2$ListNode.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBelovedLinkedListFinal/LinkedList2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBelovedLinkedListFinal/LinkedList2.ctxt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBelovedLinkedListFinal/LinkedList2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBelovedLinkedListFinal/LinkedList3$ListNode.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBelovedLinkedListFinal/LinkedList3.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBelovedLinkedListFinal/LinkedList3.ctxt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBelovedLinkedListFinal/LinkedList3.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBelovedLinkedListFinal/ListNode.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBelovedLinkedListFinal/ListNode.ctxt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBelovedLinkedListFinal/ListNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBelovedLinkedListFinal/MyLL.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBelovedLinkedListFinal/MyLL.ctxt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBelovedLinkedListFinal/MyLL.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBelovedLinkedListFinal/Node.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBelovedLinkedListFinal/Node.ctxt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBelovedLinkedListFinal/Node.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBelovedLinkedListFinal/README.TXT" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBelovedLinkedListFinal/exportToHTML/CLLRunner.ctxt.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBelovedLinkedListFinal/exportToHTML/CLLRunner.java.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBelovedLinkedListFinal/exportToHTML/CircularLinkedList.ctxt.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBelovedLinkedListFinal/exportToHTML/CircularLinkedList.java.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBelovedLinkedListFinal/exportToHTML/LLRunner.ctxt.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBelovedLinkedListFinal/exportToHTML/LLRunner.java.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBelovedLinkedListFinal/exportToHTML/LLRunner2.ctxt.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBelovedLinkedListFinal/exportToHTML/LLRunner2.java.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBelovedLinkedListFinal/exportToHTML/LLRunner3.ctxt.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBelovedLinkedListFinal/exportToHTML/LLRunner3.java.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBelovedLinkedListFinal/exportToHTML/LinkedList.ctxt.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBelovedLinkedListFinal/exportToHTML/LinkedList.java.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBelovedLinkedListFinal/exportToHTML/LinkedList2.ctxt.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBelovedLinkedListFinal/exportToHTML/LinkedList2.java.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBelovedLinkedListFinal/exportToHTML/LinkedList3.ctxt.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBelovedLinkedListFinal/exportToHTML/LinkedList3.java.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBelovedLinkedListFinal/exportToHTML/ListNode.ctxt.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBelovedLinkedListFinal/exportToHTML/ListNode.java.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBelovedLinkedListFinal/exportToHTML/MyLL.ctxt.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBelovedLinkedListFinal/exportToHTML/MyLL.java.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBelovedLinkedListFinal/exportToHTML/Node.ctxt.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBelovedLinkedListFinal/exportToHTML/Node.java.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBelovedLinkedListFinal/exportToHTML/README.TXT.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBelovedLinkedListFinal/exportToHTML/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBelovedLinkedListFinal/exportToHTML/package.bluej.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBelovedLinkedListFinal/exportToHTML/test.ctxt.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBelovedLinkedListFinal/exportToHTML/test.java.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBelovedLinkedListFinal/package.bluej" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBelovedLinkedListFinal/test.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBelovedLinkedListFinal/test.ctxt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBelovedLinkedListFinal/test.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2KYaosUf2i3YFJAbDstb6Joi2ad" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ed0820de-3399-49e4-863e-9a62084655bf" name="Changes" comment="" />
+      <created>1674154147732</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1674154147732</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="linked list files!" />
+    <option name="LAST_COMMIT_MESSAGE" value="linked list files!" />
+  </component>
+</project>

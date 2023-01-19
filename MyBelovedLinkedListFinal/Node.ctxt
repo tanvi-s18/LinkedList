@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=Node
+comment0.text=\n\ Write\ a\ description\ of\ class\ Node\ here.\n\n\ @author\ (your\ name)\n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=dat\ nxt
+comment1.target=Node(java.lang.String,\ Node)
+comment2.params=dat
+comment2.target=Node(java.lang.String)
+comment3.params=
+comment3.target=java.lang.String\ getValue()
+comment4.params=
+comment4.target=Node\ returnNext()
+comment5.params=nData
+comment5.target=void\ setValue(java.lang.String)
+comment6.params=nNext
+comment6.target=void\ setNext(Node)
+numComments=7

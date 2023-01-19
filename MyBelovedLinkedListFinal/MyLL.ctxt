@@ -1,0 +1,21 @@
+#BlueJ class context
+comment0.target=MyLL
+comment0.text=\n\ Write\ a\ description\ of\ interface\ MyLL\ here.\n\n\ @author\ (your\ name)\n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=
+comment1.target=int\ size()
+comment1.text=\n\ An\ example\ of\ a\ method\ header\ -\ replace\ this\ comment\ with\ your\ own\n\n\ @param\ \ y\ a\ sample\ parameter\ for\ a\ method\n\ @return\ \ \ the\ result\ produced\ by\ sampleMethod\n
+comment2.params=newData
+comment2.target=void\ add(java.lang.Object)
+comment3.params=loc\ newData
+comment3.target=void\ add(int,\ java.lang.Object)
+comment4.params=loc
+comment4.target=java.lang.Object\ getValue(int)
+comment5.params=val
+comment5.target=int\ getLocation(java.lang.Object)
+comment6.params=val
+comment6.target=void\ remove(java.lang.Object)
+comment7.params=loc
+comment7.target=java.lang.Object\ remove(int)
+comment8.params=
+comment8.target=java.lang.String\ toString()
+numComments=9

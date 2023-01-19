@@ -1,0 +1,216 @@
+<html>
+<head>
+<title>CLLRunner.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #a9b7c6;}
+.s1 { color: #629755; font-style: italic;}
+.s2 { color: #629755; font-weight: bold; font-style: italic;}
+.s3 { color: #cc7832;}
+.s4 { color: #808080;}
+.s5 { color: #6a8759;}
+.s6 { color: #6897bb;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+CLLRunner.java</font>
+</center></td></tr></table>
+<pre>
+<span class="s1">/**</span>
+ <span class="s1">* Write a description of class CLLRunner here.</span>
+ <span class="s1">*</span>
+ <span class="s1">* </span><span class="s2">@author </span><span class="s1">(your name)</span>
+ <span class="s1">* </span><span class="s2">@version </span><span class="s1">(a version number or a date)</span>
+ <span class="s1">*/</span>
+<span class="s3">public class </span><span class="s0">CLLRunner</span>
+<span class="s0">{</span>
+    <span class="s4">// instance variables - replace the example below with your own</span>
+    
+
+    <span class="s1">/**</span>
+     <span class="s1">* Constructor for objects of class CLLRunner</span>
+     <span class="s1">*/</span>
+    
+
+    <span class="s1">/**</span>
+     <span class="s1">* An example of a method - replace this comment with your own</span>
+     <span class="s1">*</span>
+     <span class="s1">* </span><span class="s2">@param  </span><span class="s1">y  a sample parameter for a method</span>
+     <span class="s1">* </span><span class="s2">@return    </span><span class="s1">the sum of x and y</span>
+     <span class="s1">*/</span>
+    <span class="s3">public static void </span><span class="s0">main()</span>
+    <span class="s0">{</span>
+        <span class="s4">// CircularLinkedList&lt;String&gt; test1= new CircularLinkedList();</span>
+        <span class="s4">// //test1.add(&quot;a&quot;);</span>
+        <span class="s4">// System.out.println(test1);</span>
+        <span class="s4">// test1.add(&quot;b&quot;);</span>
+        <span class="s4">// System.out.println(test1);</span>
+        <span class="s4">// test1.add(&quot;d&quot;);</span>
+        <span class="s4">// System.out.println(test1);</span>
+        <span class="s4">// test1.add(2, &quot;c&quot;);</span>
+        <span class="s4">// System.out.println(test1);</span>
+        <span class="s4">// test1.remove(&quot;d&quot;);</span>
+        <span class="s4">// System.out.println(test1);</span>
+        <span class="s4">// System.out.println(&quot;Add element a to front:&quot;);</span>
+        <span class="s4">// test1.add(0, &quot;a&quot;);</span>
+        <span class="s4">// System.out.println(test1);</span>
+        <span class="s4">// CircularLinkedList&lt;String&gt; test2= new CircularLinkedList(&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;);</span>
+        <span class="s4">// System.out.println(test2);</span>
+        <span class="s4">// test2.add(&quot;e&quot;);</span>
+          <span class="s0">CircularLinkedList&lt;String&gt; test1 = </span><span class="s3">new </span><span class="s0">CircularLinkedList(</span><span class="s5">&quot;b&quot;</span><span class="s3">, </span><span class="s5">&quot;c&quot;</span><span class="s3">, </span><span class="s5">&quot;d&quot;</span><span class="s3">, </span><span class="s5">&quot;f&quot;</span><span class="s0">)</span><span class="s3">;</span>
+      <span class="s0">System.out.println(</span><span class="s5">&quot;Original List:&quot;</span><span class="s0">)</span><span class="s3">;</span>
+      <span class="s0">System.out.println(test1)</span><span class="s3">;</span>
+      <span class="s4">//test1.add(&quot;d&quot;);</span>
+      
+      <span class="s0">System.out.println(</span><span class="s5">&quot;Add element a to front:&quot;</span><span class="s0">)</span><span class="s3">;</span>
+      <span class="s0">test1.add(</span><span class="s6">0</span><span class="s3">,</span><span class="s5">&quot;a&quot;</span><span class="s0">)</span><span class="s3">;</span>
+      <span class="s0">System.out.println(test1)</span><span class="s3">;</span>
+      <span class="s0">System.out.println(</span><span class="s5">&quot;Add element g to end:&quot;</span><span class="s0">)</span><span class="s3">;</span>
+      <span class="s0">test1.add(</span><span class="s5">&quot;g&quot;</span><span class="s0">)</span><span class="s3">;</span>
+      <span class="s0">System.out.println(test1)</span><span class="s3">;</span>
+      <span class="s0">System.out.println(</span><span class="s5">&quot;Add element e to location 4:&quot;</span><span class="s0">)</span><span class="s3">;</span>
+      <span class="s0">test1.add(</span><span class="s6">4</span><span class="s3">,</span><span class="s5">&quot;e&quot;</span><span class="s0">)</span><span class="s3">;</span>
+      <span class="s0">System.out.println(</span><span class="s5">&quot;Check pointers by stopping when it hits front:&quot;</span><span class="s0">)</span><span class="s3">;</span>
+      <span class="s0">test1.printAll()</span><span class="s3">;</span>
+      <span class="s0">System.out.println(</span><span class="s5">&quot;Check pointers by using getFront() method:&quot;</span><span class="s0">)</span><span class="s3">;</span>
+      <span class="s0">System.out.println(test1.testGetFront())</span><span class="s3">;</span>
+      <span class="s0">System.out.println(test1)</span><span class="s3">;</span>
+      <span class="s0">System.out.println(</span><span class="s5">&quot;Remove element g (from end of list):&quot;</span><span class="s0">)</span><span class="s3">;</span>
+      <span class="s0">test1.remove(</span><span class="s5">&quot;g&quot;</span><span class="s0">)</span><span class="s3">;</span>
+      <span class="s0">System.out.println(test1)</span><span class="s3">;</span>
+      <span class="s0">System.out.println(</span><span class="s5">&quot;Remove element a (from front of list):&quot;</span><span class="s0">)</span><span class="s3">;</span>
+      <span class="s0">test1.remove(</span><span class="s5">&quot;a&quot;</span><span class="s0">)</span><span class="s3">;</span>
+      <span class="s0">System.out.println(test1)</span><span class="s3">;</span>
+      <span class="s0">System.out.println(</span><span class="s5">&quot;Remove element c (from middle of list):&quot;</span><span class="s0">)</span><span class="s3">;</span>
+      <span class="s0">test1.remove(</span><span class="s5">&quot;c&quot;</span><span class="s0">)</span><span class="s3">;</span>
+      <span class="s0">System.out.println(test1)</span><span class="s3">;</span>
+      <span class="s0">System.out.println(</span><span class="s5">&quot;Remove element t from list:&quot;</span><span class="s0">)</span><span class="s3">;</span>
+      <span class="s0">test1.remove(</span><span class="s5">&quot;t&quot;</span><span class="s0">)</span><span class="s3">;</span>
+      <span class="s0">System.out.println(test1)</span><span class="s3">;</span>
+      <span class="s0">System.out.println(</span><span class="s5">&quot;Restart with list of 7 elements (manually add back removed nodes):&quot;</span><span class="s0">)</span><span class="s3">;</span>
+      <span class="s0">test1.add(</span><span class="s6">0</span><span class="s3">,</span><span class="s5">&quot;a&quot;</span><span class="s0">)</span><span class="s3">;</span>
+      <span class="s0">test1.add(</span><span class="s5">&quot;g&quot;</span><span class="s0">)</span><span class="s3">;</span>
+      <span class="s0">test1.add(</span><span class="s6">2</span><span class="s3">,</span><span class="s5">&quot;c&quot;</span><span class="s0">)</span><span class="s3">;</span>
+      <span class="s0">System.out.println(test1)</span><span class="s3">;</span>
+      <span class="s0">System.out.println(</span><span class="s5">&quot;Get value at location 3:&quot;</span><span class="s0">)</span><span class="s3">;</span>
+      <span class="s0">System.out.println(test1.getValue(</span><span class="s6">3</span><span class="s0">))</span><span class="s3">;</span>
+      <span class="s0">System.out.println(</span><span class="s5">&quot;Get value at location 6 (loc= size-1):&quot;</span><span class="s0">)</span><span class="s3">;</span>
+      <span class="s0">System.out.println(test1.getValue(</span><span class="s6">6</span><span class="s0">))</span><span class="s3">;</span>
+      <span class="s0">System.out.println(</span><span class="s5">&quot;Get value at location 0:&quot;</span><span class="s0">)</span><span class="s3">;</span>
+      <span class="s0">System.out.println(test1.getValue(</span><span class="s6">0</span><span class="s0">))</span><span class="s3">;</span>
+      <span class="s0">System.out.println(</span><span class="s5">&quot;Get value at location 10:&quot;</span><span class="s0">)</span><span class="s3">;</span>
+      <span class="s0">System.out.println(test1.getValue(</span><span class="s6">10</span><span class="s0">))</span><span class="s3">;</span>
+      <span class="s0">System.out.println(</span><span class="s5">&quot;Get location of value b:&quot;</span><span class="s0">)</span><span class="s3">;</span>
+      <span class="s0">System.out.println(test1.getLocation(</span><span class="s5">&quot;b&quot;</span><span class="s0">))</span><span class="s3">;</span>
+      <span class="s0">System.out.println(</span><span class="s5">&quot;Get location of value a:&quot;</span><span class="s0">)</span><span class="s3">;</span>
+      <span class="s0">System.out.println(test1.getLocation(</span><span class="s5">&quot;a&quot;</span><span class="s0">))</span><span class="s3">;</span>
+      <span class="s0">System.out.println(</span><span class="s5">&quot;Get location of value h:&quot;</span><span class="s0">)</span><span class="s3">;</span>
+      <span class="s0">System.out.println(test1.getLocation(</span><span class="s5">&quot;h&quot;</span><span class="s0">))</span><span class="s3">;</span>
+      <span class="s0">System.out.println(</span><span class="s5">&quot;Remove element at location 3 from list:&quot;</span><span class="s0">)</span><span class="s3">;</span>
+      <span class="s0">test1.remove(</span><span class="s6">3</span><span class="s0">)</span><span class="s3">;</span>
+      <span class="s0">System.out.println(test1)</span><span class="s3">;</span>
+      <span class="s0">System.out.println(</span><span class="s5">&quot;Remove element at location 0 (front of list) from list:&quot;</span><span class="s0">)</span><span class="s3">;</span>
+      <span class="s0">test1.remove(</span><span class="s6">0</span><span class="s0">)</span><span class="s3">;</span>
+      <span class="s0">System.out.println(test1)</span><span class="s3">;</span>
+      <span class="s0">System.out.println(</span><span class="s5">&quot;Remove element at location 4 (end of list) from list:&quot;</span><span class="s0">)</span><span class="s3">;</span>
+      <span class="s0">test1.remove(</span><span class="s6">4</span><span class="s0">)</span><span class="s3">;</span>
+      <span class="s0">System.out.println(test1)</span><span class="s3">;</span>
+      <span class="s0">System.out.println(</span><span class="s5">&quot;Remove element at location 6 (out of bounds)  from list:&quot;</span><span class="s0">)</span><span class="s3">;</span>
+      <span class="s0">test1.remove(</span><span class="s6">6</span><span class="s0">)</span><span class="s3">;</span>
+      <span class="s0">System.out.println(test1)</span><span class="s3">;</span>
+      <span class="s0">System.out.println(</span><span class="s5">&quot;Remove element at location 1:&quot;</span><span class="s0">)</span><span class="s3">;</span>
+      <span class="s0">test1.remove(</span><span class="s6">1</span><span class="s0">)</span><span class="s3">;</span>
+      <span class="s0">System.out.println(test1)</span><span class="s3">;</span>
+      <span class="s0">System.out.println(</span><span class="s5">&quot;Remove element at location 0:&quot;</span><span class="s0">)</span><span class="s3">;</span>
+      <span class="s0">test1.remove(</span><span class="s6">0</span><span class="s0">)</span><span class="s3">;</span>
+      <span class="s0">System.out.println(test1)</span><span class="s3">;</span>
+      <span class="s0">System.out.println(</span><span class="s5">&quot;Remove element at location 0:&quot;</span><span class="s0">)</span><span class="s3">;</span>
+      <span class="s0">test1.remove(</span><span class="s6">0</span><span class="s0">)</span><span class="s3">;</span>
+      <span class="s0">System.out.println(test1)</span><span class="s3">;</span>
+      <span class="s0">System.out.println(</span><span class="s5">&quot;Add element b when size =1&quot;</span><span class="s0">)</span><span class="s3">;</span>
+      <span class="s0">test1.add(</span><span class="s6">1</span><span class="s3">,</span><span class="s5">&quot;b&quot;</span><span class="s0">)</span><span class="s3">;</span>
+      <span class="s0">System.out.println(test1)</span><span class="s3">;</span>
+      <span class="s0">System.out.println(</span><span class="s5">&quot;Remove element at location 0:&quot;</span><span class="s0">)</span><span class="s3">;</span>
+      <span class="s0">test1.remove(</span><span class="s6">0</span><span class="s0">)</span><span class="s3">;</span>
+      <span class="s0">System.out.println(test1)</span><span class="s3">;</span>
+      <span class="s0">System.out.println(</span><span class="s5">&quot;Remove element at location 0:&quot;</span><span class="s0">)</span><span class="s3">;</span>
+      <span class="s0">test1.remove(</span><span class="s6">0</span><span class="s0">)</span><span class="s3">;</span>
+      <span class="s0">System.out.println(test1)</span><span class="s3">;</span>
+      <span class="s0">System.out.println()</span><span class="s3">;</span>
+      <span class="s0">System.out.println(</span><span class="s5">&quot;New list:&quot;</span><span class="s0">)</span><span class="s3">;</span>
+      <span class="s0">CircularLinkedList&lt;Double&gt; test2 = </span><span class="s3">new </span><span class="s0">CircularLinkedList(</span><span class="s6">.2</span><span class="s3">, </span><span class="s6">.4</span><span class="s3">, </span><span class="s6">.5</span><span class="s3">, </span><span class="s6">.6</span><span class="s0">)</span><span class="s3">;</span>
+      <span class="s0">System.out.println(test2)</span><span class="s3">;</span>
+      <span class="s0">System.out.println(</span><span class="s5">&quot;Add element .3 to location 1&quot;</span><span class="s0">)</span><span class="s3">;</span>
+      <span class="s0">test2.add(</span><span class="s6">1</span><span class="s3">, </span><span class="s6">.3</span><span class="s0">)</span><span class="s3">;</span>
+      <span class="s0">System.out.println(test2)</span><span class="s3">;</span>
+      <span class="s0">System.out.println(</span><span class="s5">&quot;Add element .1 to front&quot;</span><span class="s0">)</span><span class="s3">;</span>
+      <span class="s0">test2.add(</span><span class="s6">0</span><span class="s3">,</span><span class="s6">.1</span><span class="s0">)</span><span class="s3">;</span>
+      <span class="s0">System.out.println(test2)</span><span class="s3">;</span>
+      <span class="s0">System.out.println(</span><span class="s5">&quot;Add element .7 to end&quot;</span><span class="s0">)</span><span class="s3">;</span>
+      <span class="s0">test2.add(</span><span class="s6">.7</span><span class="s0">)</span><span class="s3">;</span>
+      <span class="s0">System.out.println(test2)</span><span class="s3">;</span>
+      <span class="s0">System.out.println(</span><span class="s5">&quot;Remove element .3&quot;</span><span class="s0">)</span><span class="s3">;</span>
+      <span class="s0">test2.remove(</span><span class="s6">.3</span><span class="s0">)</span><span class="s3">;</span>
+      <span class="s0">System.out.println(test2)</span><span class="s3">;</span>
+      <span class="s0">System.out.println(</span><span class="s5">&quot;Remove element .1&quot;</span><span class="s0">)</span><span class="s3">;</span>
+      <span class="s0">test2.remove(</span><span class="s6">.1</span><span class="s0">)</span><span class="s3">;</span>
+      <span class="s0">System.out.println(test2)</span><span class="s3">;</span>
+      <span class="s0">System.out.println(</span><span class="s5">&quot;Remove element .6&quot;</span><span class="s0">)</span><span class="s3">;</span>
+      <span class="s0">test2.remove(</span><span class="s6">.6</span><span class="s0">)</span><span class="s3">;</span>
+      <span class="s0">System.out.println(test2)</span><span class="s3">;</span>
+      <span class="s0">System.out.println(</span><span class="s5">&quot;Restart with list of 7 elements (manually add back removed nodes):&quot;</span><span class="s0">)</span><span class="s3">;</span>
+      <span class="s0">test2.add(</span><span class="s6">0</span><span class="s3">, </span><span class="s6">.1</span><span class="s0">)</span><span class="s3">;</span>
+      <span class="s0">test2.add(</span><span class="s6">2</span><span class="s3">, </span><span class="s6">.3</span><span class="s0">)</span><span class="s3">;</span>
+      <span class="s0">test2.add(</span><span class="s6">.7</span><span class="s0">)</span><span class="s3">;</span>
+      <span class="s0">System.out.println(test2)</span><span class="s3">;</span>
+      <span class="s0">System.out.println(</span><span class="s5">&quot;Get value at location 2:&quot;</span><span class="s0">)</span><span class="s3">;</span>
+      <span class="s0">System.out.println(test2.getValue(</span><span class="s6">2</span><span class="s0">))</span><span class="s3">;</span>
+      <span class="s0">System.out.println(</span><span class="s5">&quot;Get location of value .2:&quot;</span><span class="s0">)</span><span class="s3">;</span>
+      <span class="s0">System.out.println(test2.getLocation(</span><span class="s6">.2</span><span class="s0">))</span><span class="s3">;</span>
+      <span class="s0">System.out.println(</span><span class="s5">&quot;Get location of value .72:&quot;</span><span class="s0">)</span><span class="s3">;</span>
+      <span class="s0">System.out.println(test2.getLocation(</span><span class="s6">.72</span><span class="s0">))</span><span class="s3">;</span>
+      <span class="s0">System.out.println(</span><span class="s5">&quot;Remove element at location 3&quot;</span><span class="s0">)</span><span class="s3">;</span>
+      <span class="s0">test2.remove(</span><span class="s6">3</span><span class="s0">)</span><span class="s3">;</span>
+      <span class="s0">System.out.println(test2)</span><span class="s3">;</span>
+      <span class="s0">System.out.println(</span><span class="s5">&quot;Remove element from front of list&quot;</span><span class="s0">)</span><span class="s3">;</span>
+      <span class="s0">test2.remove(</span><span class="s6">0</span><span class="s0">)</span><span class="s3">;</span>
+      <span class="s0">System.out.println(test2)</span><span class="s3">;</span>
+      <span class="s0">System.out.println(</span><span class="s5">&quot;Remove element from end of list&quot;</span><span class="s0">)</span><span class="s3">;</span>
+      <span class="s0">test2.remove(</span><span class="s6">4</span><span class="s0">)</span><span class="s3">;</span>
+      <span class="s0">System.out.println(test2)</span><span class="s3">;</span>
+      <span class="s0">System.out.println(</span><span class="s5">&quot;Remove element at location 5&quot;</span><span class="s0">)</span><span class="s3">;</span>
+      <span class="s0">test2.remove(</span><span class="s6">6</span><span class="s0">)</span><span class="s3">;</span>
+      <span class="s0">System.out.println(test2)</span><span class="s3">;</span>
+      <span class="s0">System.out.println(</span><span class="s5">&quot;Remove element .4&quot;</span><span class="s0">)</span><span class="s3">;</span>
+      <span class="s0">test2.remove(</span><span class="s6">.8</span><span class="s0">)</span><span class="s3">;</span>
+      <span class="s0">System.out.println(test2)</span><span class="s3">;</span>
+      <span class="s0">System.out.println(</span><span class="s5">&quot;Add element .5 at location 10&quot;</span><span class="s0">)</span><span class="s3">;</span>
+      <span class="s0">test2.add(</span><span class="s6">10</span><span class="s3">, </span><span class="s6">.5</span><span class="s0">)</span><span class="s3">;</span>
+      <span class="s0">System.out.println()</span><span class="s3">;</span>
+      <span class="s0">System.out.println(</span><span class="s5">&quot;New list:&quot;</span><span class="s0">)</span><span class="s3">;</span>
+      <span class="s0">CircularLinkedList&lt;Double&gt; test3 = </span><span class="s3">new </span><span class="s0">CircularLinkedList()</span><span class="s3">;</span>
+      <span class="s0">System.out.println(test3)</span><span class="s3">;</span>
+      <span class="s0">System.out.println(</span><span class="s5">&quot;Add element 1.0 when size of list is 0&quot;</span><span class="s0">)</span><span class="s3">;</span>
+      <span class="s0">test3.add(</span><span class="s6">1.0</span><span class="s0">)</span><span class="s3">;</span>
+      <span class="s0">System.out.println(test3)</span><span class="s3">;</span>
+      <span class="s0">System.out.println(</span><span class="s5">&quot;Add element 0.0 to front of list when size of list is 1&quot;</span><span class="s0">)</span><span class="s3">;</span>
+      <span class="s0">test3.add(</span><span class="s6">0</span><span class="s3">,</span><span class="s6">0.0</span><span class="s0">)</span><span class="s3">;</span>
+      <span class="s0">System.out.println(test3)</span><span class="s3">;</span>
+      <span class="s0">System.out.println(</span><span class="s5">&quot;New List:&quot;</span><span class="s0">)</span><span class="s3">;</span>
+      <span class="s0">CircularLinkedList&lt;Double&gt; test4 = </span><span class="s3">new </span><span class="s0">CircularLinkedList()</span><span class="s3">;</span>
+      <span class="s0">System.out.println(test4)</span><span class="s3">;</span>
+      <span class="s0">System.out.println(</span><span class="s5">&quot;Add element 1.0 to location 0 when size of list is 0&quot;</span><span class="s0">)</span><span class="s3">;</span>
+      <span class="s0">test4.add(</span><span class="s6">0</span><span class="s3">,</span><span class="s6">1.0</span><span class="s0">)</span><span class="s3">;</span>
+      <span class="s0">System.out.println(test4)</span><span class="s3">;</span>
+      <span class="s0">System.out.println(</span><span class="s5">&quot;Remove element at location 0 when size=1&quot;</span><span class="s0">)</span><span class="s3">;</span>
+      <span class="s0">test4.remove(</span><span class="s6">0</span><span class="s0">)</span><span class="s3">;</span>
+      <span class="s0">System.out.println(test4)</span><span class="s3">;</span>
+      
+    <span class="s0">}</span>
+<span class="s0">}</span>
+</pre>
+</body>
+</html>

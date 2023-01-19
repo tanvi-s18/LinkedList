@@ -1,0 +1,188 @@
+<html>
+<head>
+<title>LinkedList.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #a9b7c6;}
+.s1 { color: #629755; font-style: italic;}
+.s2 { color: #629755; font-weight: bold; font-style: italic;}
+.s3 { color: #cc7832;}
+.s4 { color: #808080;}
+.s5 { color: #6897bb;}
+.s6 { color: #6a8759;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+LinkedList.java</font>
+</center></td></tr></table>
+<pre>
+<span class="s1">/**</span>
+ <span class="s1">* Write a description of class LinkedList here.</span>
+ <span class="s1">*</span>
+ <span class="s1">* </span><span class="s2">@author </span><span class="s1">(your name)</span>
+ <span class="s1">* </span><span class="s2">@version </span><span class="s1">(a version number or a date)</span>
+ <span class="s1">*/</span>
+<span class="s3">public class </span><span class="s0">LinkedList</span>
+<span class="s0">{</span>
+    <span class="s4">// instance variables - replace the example below with your own</span>
+    <span class="s3">private </span><span class="s0">ListNode front</span><span class="s3">;</span>
+    <span class="s3">private </span><span class="s0">ListNode back</span><span class="s3">;</span>
+    <span class="s3">private </span><span class="s0">ListNode current</span><span class="s3">;</span>
+    <span class="s3">private int </span><span class="s0">size</span><span class="s3">;</span>
+
+    <span class="s1">/**</span>
+     <span class="s1">* Constructor for objects of class LinkedList</span>
+     <span class="s1">*/</span>
+    <span class="s3">public </span><span class="s0">LinkedList()</span>
+    <span class="s0">{   front= </span><span class="s3">null;</span>
+        <span class="s0">back= </span><span class="s3">null;</span>
+
+    <span class="s0">}</span>
+
+    <span class="s3">public </span><span class="s0">LinkedList(String a</span><span class="s3">, </span><span class="s0">String b</span><span class="s3">, </span><span class="s0">String c)</span>
+    <span class="s0">{ front= </span><span class="s3">new </span><span class="s0">ListNode(a</span><span class="s3">, null</span><span class="s0">)</span><span class="s3">;</span>
+        <span class="s0">ListNode mid = </span><span class="s3">new </span><span class="s0">ListNode(b</span><span class="s3">, null</span><span class="s0">)</span><span class="s3">;</span>
+        <span class="s0">front.setNext(mid)</span><span class="s3">;</span>
+        <span class="s0">back= </span><span class="s3">new </span><span class="s0">ListNode(c</span><span class="s3">, null</span><span class="s0">)</span><span class="s3">;</span>
+        <span class="s0">mid.setNext(back)</span><span class="s3">;</span>
+        <span class="s0">size=</span><span class="s5">3</span><span class="s3">;</span>
+
+    <span class="s0">}</span>
+
+    <span class="s3">public </span><span class="s0">String toString()</span>
+    <span class="s0">{ String answer= </span><span class="s6">&quot;size: &quot; </span><span class="s0">+ size + </span><span class="s6">&quot;</span><span class="s3">\n</span><span class="s6">front node: &quot;</span><span class="s0">+ front.getValue()+ </span><span class="s6">&quot;</span><span class="s3">\n</span><span class="s6">back node: &quot; </span><span class="s0">+ back.getValue() + </span><span class="s6">&quot;</span><span class="s3">\n</span><span class="s6">&quot;</span><span class="s3">;</span>
+
+        <span class="s0">ListNode current= front</span><span class="s3">;</span>
+        <span class="s3">while</span><span class="s0">( current != </span><span class="s3">null</span><span class="s0">)</span>
+        <span class="s0">{answer = answer + current.toString() + </span><span class="s6">&quot;</span><span class="s3">\n</span><span class="s6">&quot;</span><span class="s3">;</span>
+            <span class="s0">current = current.returnNext()</span><span class="s3">;</span>
+        <span class="s0">}</span>
+        <span class="s3">return </span><span class="s0">answer</span><span class="s3">;</span>
+    <span class="s0">}</span>
+
+    <span class="s3">public int </span><span class="s0">size()</span>
+    <span class="s0">{ current= front</span><span class="s3">;</span>
+        <span class="s3">int </span><span class="s0">i= </span><span class="s5">0</span><span class="s3">;</span>
+        <span class="s3">while</span><span class="s0">(current.returnNext() != </span><span class="s3">null</span><span class="s0">)</span>
+        <span class="s0">{ i++</span><span class="s3">;</span>
+        <span class="s0">}</span>
+        <span class="s0">i++</span><span class="s3">;</span>
+
+        <span class="s3">return </span><span class="s0">i</span><span class="s3">;</span>
+    <span class="s0">}</span>
+
+    <span class="s3">public void </span><span class="s0">add(String newData)</span>
+    <span class="s0">{ ListNode temp= </span><span class="s3">new </span><span class="s0">ListNode(newData)</span><span class="s3">;</span>
+        <span class="s3">if </span><span class="s0">(front == </span><span class="s3">null</span><span class="s0">)</span>
+        <span class="s0">{</span>
+            <span class="s0">front= temp</span><span class="s3">;</span>
+            <span class="s0">back=temp</span><span class="s3">;</span>
+        <span class="s0">}</span>
+        <span class="s3">else</span>
+        <span class="s0">{</span>
+            <span class="s0">back.setNext(temp)</span><span class="s3">;</span>
+            <span class="s0">back = temp</span><span class="s3">;</span>
+        <span class="s0">}</span>
+        <span class="s0">size++</span><span class="s3">;</span>
+
+    <span class="s0">}</span>
+
+    <span class="s3">public void </span><span class="s0">add(</span><span class="s3">int </span><span class="s0">loc</span><span class="s3">, </span><span class="s0">String newData)</span>
+    <span class="s0">{ ListNode temp = </span><span class="s3">new </span><span class="s0">ListNode(newData)</span><span class="s3">;</span>
+
+        <span class="s3">if </span><span class="s0">(loc &gt; size)</span>
+            <span class="s0">System.out.print(</span><span class="s6">&quot;Location exceeds bounds.&quot;</span><span class="s0">)</span><span class="s3">;</span>
+        <span class="s3">if </span><span class="s0">(size==</span><span class="s5">0 </span><span class="s0">&amp;&amp; loc ==</span><span class="s5">0</span><span class="s0">)</span>
+        <span class="s0">{</span>
+            <span class="s0">front= temp</span><span class="s3">;</span>
+            <span class="s0">back= temp</span><span class="s3">;</span>
+            <span class="s0">size++</span><span class="s3">;</span>
+        <span class="s0">}</span>
+        <span class="s3">if </span><span class="s0">(loc == (size) &amp;&amp; size!=</span><span class="s5">0</span><span class="s0">)</span>
+        <span class="s0">{ back.setNext(temp)</span><span class="s3">;</span>
+            <span class="s0">back= temp</span><span class="s3">;</span>
+            <span class="s0">size++</span><span class="s3">;</span>
+        <span class="s0">}</span>
+        <span class="s3">if </span><span class="s0">((front != </span><span class="s3">null</span><span class="s0">) &amp;&amp; loc==</span><span class="s5">0</span><span class="s0">)</span>
+        <span class="s0">{ temp.setNext(front)</span><span class="s3">;</span>
+            <span class="s0">front= temp</span><span class="s3">;</span>
+            <span class="s0">size++</span><span class="s3">;</span>
+        <span class="s0">}</span>
+        <span class="s3">if</span><span class="s0">(loc != size &amp;&amp; loc!= </span><span class="s5">0</span><span class="s0">)</span>
+        <span class="s0">{ </span><span class="s3">int </span><span class="s0">i=</span><span class="s5">0</span><span class="s3">;</span>
+            <span class="s0">current= front</span><span class="s3">;</span>
+            <span class="s3">while</span><span class="s0">(i&lt;loc-</span><span class="s5">1</span><span class="s0">)</span>
+            <span class="s0">{current= current.returnNext()</span><span class="s3">;</span>
+                <span class="s0">i++</span><span class="s3">;</span>
+            <span class="s0">}</span>
+            <span class="s0">temp.setNext(current.returnNext())</span><span class="s3">;</span>
+            <span class="s0">current.setNext(temp)</span><span class="s3">;</span>
+            <span class="s0">size++</span><span class="s3">;</span>
+
+        <span class="s0">}</span>
+    <span class="s0">}</span>
+
+    <span class="s3">public void </span><span class="s0">remove(</span><span class="s3">int </span><span class="s0">loc)</span>
+    <span class="s0">{   </span><span class="s3">if</span><span class="s0">(size==</span><span class="s5">0</span><span class="s0">)</span>
+            <span class="s0">System.out.print(</span><span class="s6">&quot;Index Out Of Bounds- Empty List&quot;</span><span class="s0">)</span><span class="s3">;</span>
+        <span class="s3">else if</span><span class="s0">(loc==</span><span class="s5">0</span><span class="s0">)</span>
+        <span class="s0">{front= front.returnNext()</span><span class="s3">;</span>
+            <span class="s0">size--</span><span class="s3">;</span>
+        <span class="s0">}</span>
+        <span class="s3">else if</span><span class="s0">(loc==size-</span><span class="s5">1</span><span class="s0">)</span>
+        <span class="s0">{ current= front</span><span class="s3">;</span>
+
+            <span class="s3">for</span><span class="s0">(</span><span class="s3">int </span><span class="s0">i=</span><span class="s5">0</span><span class="s3">; </span><span class="s0">i&lt; size-</span><span class="s5">2</span><span class="s3">;</span><span class="s0">i++)</span>
+            <span class="s0">{current=current.returnNext()</span><span class="s3">;</span>
+            <span class="s0">}</span>
+
+            <span class="s0">back= current</span><span class="s3">;</span>
+            <span class="s0">back.setNext(</span><span class="s3">null</span><span class="s0">)</span><span class="s3">;</span>
+            <span class="s0">size--</span><span class="s3">;</span>
+        <span class="s0">}</span>
+        <span class="s3">else</span>
+        <span class="s0">{current= front</span><span class="s3">;</span>
+            <span class="s3">int </span><span class="s0">i=</span><span class="s5">0</span><span class="s3">;</span>
+            <span class="s3">while </span><span class="s0">(i&lt;loc-</span><span class="s5">1</span><span class="s0">)</span>
+            <span class="s0">{current= current.returnNext()</span><span class="s3">;</span>
+                <span class="s0">i++</span><span class="s3">;</span>
+            <span class="s0">}</span>
+            <span class="s3">if</span><span class="s0">(current.returnNext() != </span><span class="s3">null</span><span class="s0">)</span>
+            <span class="s0">{current.setNext(current.returnNext().returnNext())</span><span class="s3">;</span>
+            <span class="s0">}</span>
+            <span class="s3">else </span><span class="s0">current.setNext(</span><span class="s3">null</span><span class="s0">)</span><span class="s3">;</span>
+            <span class="s0">size--</span><span class="s3">;</span>
+        <span class="s0">}</span>
+
+    <span class="s0">}</span>
+
+    <span class="s3">public void </span><span class="s0">remove(String val)</span>
+    <span class="s0">{ current= front</span><span class="s3">;</span>
+        <span class="s3">int </span><span class="s0">i= </span><span class="s5">0</span><span class="s3">;</span>
+        <span class="s3">while</span><span class="s0">(current != </span><span class="s3">null</span><span class="s0">)</span>
+        <span class="s0">{ </span>
+            <span class="s3">if</span><span class="s0">(current.getValue().equals(val))</span>
+            <span class="s0">{ remove(i)</span><span class="s3">;</span>
+                <span class="s0">i--</span><span class="s3">;</span>
+                <span class="s0">current=current.returnNext()</span><span class="s3">;</span>
+                <span class="s4">//int j= 0;</span>
+                <span class="s4">// while(j&lt; i-1)</span>
+                <span class="s4">// {current= current.returnNext();</span>
+                <span class="s4">// i++;</span>
+                <span class="s4">// }</span>
+                <span class="s4">// current.setNext(current.returnNext().returnNext());</span>
+                <span class="s4">// size--;</span>
+            <span class="s0">}</span>
+            <span class="s3">else </span>
+                <span class="s0">current= current.returnNext()</span><span class="s3">;</span>
+                <span class="s0">i++</span><span class="s3">;</span>
+        <span class="s0">}</span>
+    <span class="s0">}</span>
+<span class="s0">}</span>
+
+</pre>
+</body>
+</html>
